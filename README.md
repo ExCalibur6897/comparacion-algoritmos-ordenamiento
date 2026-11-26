@@ -17,8 +17,8 @@ El último comando guarda las nuevas mediciones en CSV. El progreso se muestra e
 ## Cómo se midió
 
 - Cada tamaño tiene tres repeticiones. En cada repetición se genera un arreglo de enteros pseudoaleatorios con una semilla reproducible. Cada sort recibe una copia del mismo arreglo y el orden de ejecución rota entre repeticiones.
-- Se calienta la JVM antes de medir. El reloj mide solo la llamada al sort e incluye el arreglo auxiliar que reserva Merge Sort. Se excluyen la generación de datos, las copias de entrada y la verificación.
-- Se compara cada salida completa con una referencia obtenida con `Arrays.sort`. La mediana es el valor central de las tres mediciones, expresadas en milisegundos.
+- Se ejecutó el programa hasta completar todas las pruebas. En cada repetición se anotó cuánto tardó cada algoritmo en ordenar su arreglo.
+- Se comprobó que cada arreglo quedara correctamente ordenado. La mediana es el valor central de las tres mediciones, expresadas en milisegundos.
 - Los seis sorts comparten cinco tamaños, desde 100 hasta 100 000 elementos. Merge, Heap y Quick Sort también se miden con 1 y 5 millones. Para los tres cuadráticos, esos dos tamaños quedan sin medición porque el costo crece aproximadamente con el cuadrado de la entrada.
 - Entorno de la corrida registrada: Intel Core Ultra 7 258V, Windows 11 y OpenJDK Temurin 17.0.18.
 
